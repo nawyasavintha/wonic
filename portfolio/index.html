@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>W.L Kaweesha Randahara — Model Portfolio</title>
+<meta name="description" content="Portfolio of W.L Kaweesha Randahara, a fashion, bridal and editorial model. Height 5'8&quot;, age 22.">
+<meta property="og:title" content="W.L Kaweesha Randahara — Model Portfolio">
+<meta property="og:description" content="Fashion · Bridal · Editorial model. Height 5'8&quot; (173 cm).">
+<meta property="og:image" content="images/bridal-red.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gelasio:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Ubuntu+Mono:wght@400;700&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+  :root {
+    /* Tokens (editorial system) */
+    --ink: #111111;
+    --ink-soft: #3a3a3a;
+    --muted: #5b5b5b;
+    --surface: #ffffff;
+    --paper: #f7f5f2;
+    --secondary: #f1f1f1;
+    --line: #dedbd6;
+    --accent: #7a1e2c;       /* wine, from the bridal lehenga */
+    --accent-soft: #f4e9ea;
+    --on-dark: #f1f1f1;
+    --on-dark-muted: #b9b6b1;
+
+    --font-serif: "Gelasio", Georgia, "Times New Roman", serif;
+    --font-mono: "Ubuntu Mono", ui-monospace, Menlo, monospace;
+
+    --s1: 8px; --s2: 16px; --s3: 24px; --s4: 32px; --s5: 40px;
+    --s6: 48px; --s8: 64px; --s10: 80px; --s12: 96px; --s16: 128px;
+
+    --maxw: 1320px;
+    --gutter: clamp(20px, 4vw, 48px);
+    --ease: cubic-bezier(.2,.7,.2,1);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--surface);
+    color: var(--ink);
+    font-family: var(--font-serif);
+    font-size: 18px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  img { display: block; max-width: 100%; height: auto; }
+  a { color: inherit; }
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; border-radius: 2px; }
+
+  .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 var(--gutter); }
+  .label {
+    font-family: var(--font-mono);
+    font-size: 14px;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .skip {
+    position: absolute; left: -9999px; top: var(--s2);
+    background: var(--ink); color: var(--surface); padding: var(--s1) var(--s2);
+    z-index: 100;
+  }
+  .skip:focus { left: var(--s2); }
+
+  /* ---------- Header ---------- */
+  .site-header {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(255,255,255,.88);
+    backdrop-filter: saturate(140%) blur(10px);
+    -webkit-backdrop-filter: saturate(140%) blur(10px);
+    border-bottom: 1px solid transparent;
+    transition: border-color .3s var(--ease);
+  }
+  .site-header.scrolled { border-bottom-color: var(--line); }
+  .site-header .wrap {
+    display: flex; align-items: center; justify-content: space-between;
+    min-height: 72px; gap: var(--s3);
+  }
+  .monogram {
+    font-size: 22px; font-weight: 600; text-decoration: none; letter-spacing: .02em;
+    display: inline-flex; align-items: center; min-height: 44px;
+  }
+  .monogram em { color: var(--accent); font-style: italic; font-weight: 400; }
+  .nav { display: flex; gap: var(--s1); }
+  .nav a {
+    font-family: var(--font-mono); font-size: 14px; letter-spacing: .12em; text-transform: uppercase;
+    text-decoration: none; color: var(--ink-soft);
+    display: inline-flex; align-items: center; min-height: 44px; padding: 0 var(--s2);
+    position: relative;
+  }
+  .nav a::after {
+    content: ""; position: absolute; left: var(--s2); right: var(--s2); bottom: 10px;
+    height: 1px; background: var(--accent); transform: scaleX(0); transform-origin: left;
+    transition: transform .35s var(--ease);
+  }
+  .nav a:hover { color: var(--ink); }
+  .nav a:hover::after, .nav a[aria-current="true"]::after { transform: scaleX(1); }
+  @media (max-width: 720px) {
+    .nav a:not(.nav-cta) { display: none; }
+  }
+  .nav-cta { border: 1px solid var(--ink); color: var(--ink) !important; }
+  .nav-cta::after { display: none; }
+  .nav-cta:hover { background: var(--ink); color: var(--surface) !important; }
+
+  /* ---------- Hero ---------- */
+  .hero { padding: var(--s8) 0 var(--s12); }
+  .hero .wrap {
+    display: grid; grid-template-columns: repeat(12, 1fr); gap: var(--s3);
+    align-items: end;
+  }
+  .hero-text { grid-column: 1 / 8; padding-bottom: var(--s4); position: relative; z-index: 2; }
+  .hero-media { grid-column: 8 / 13; position: relative; margin: 0; }
+  .hero-media img {
+    width: 100%; aspect-ratio: 2 / 3; object-fit: cover;
+  }
+  .hero-media figcaption {
+    margin-top: var(--s1);
+    display: flex; justify-content: space-between; gap: var(--s2);
+  }
+  .hero .kicker { display: flex; align-items: center; gap: var(--s2); margin: 0 0 var(--s4); }
+  .hero .kicker::before { content: ""; width: 48px; height: 1px; background: var(--accent); }
+  .name {
+    margin: 0;
+    font-weight: 400;
+    line-height: .92;
+    letter-spacing: -.02em;
+    font-size: clamp(3.2rem, 8.6vw, 8.2rem);
+  }
+  .name .initials {
+    display: block; font-family: var(--font-mono); font-size: 18px; letter-spacing: .3em;
+    color: var(--muted); margin-bottom: var(--s2);
+  }
+  .name .first { display: block; }
+  .name .last {
+    display: block; font-style: italic; color: var(--accent);
+    margin-left: clamp(0px, 4vw, 64px);
+  }
+  .hero-intro { max-width: 30ch; font-size: 22px; line-height: 1.5; color: var(--ink-soft); margin: var(--s5) 0 var(--s6); }
+  .vitals {
+    display: grid; grid-template-columns: repeat(3, auto); justify-content: start;
+    gap: var(--s5); margin: 0; padding: var(--s3) 0 0; border-top: 1px solid var(--ink);
+    max-width: 560px;
+  }
+  .vitals div { margin: 0; }
+  .vitals dt { margin-bottom: var(--s1); }
+  .vitals dd { margin: 0; font-size: 32px; line-height: 1.1; }
+  .vitals dd small { display: block; font-family: var(--font-mono); font-size: 14px; color: var(--muted); margin-top: 4px; }
+
+  @media (max-width: 900px) {
+    .hero { padding-top: var(--s4); }
+    .hero-text, .hero-media { grid-column: 1 / -1; }
+    .hero-media { order: -1; }
+    .name .last { margin-right: 0; }
+    .hero-intro { margin: var(--s4) 0; }
+  }
+  @media (max-width: 480px) {
+    .vitals { gap: var(--s3); }
+    .vitals dd { font-size: 26px; }
+  }
+
+  /* ---------- Statement ---------- */
+  .statement { background: var(--paper); padding: var(--s16) 0; }
+  .statement .wrap { display: grid; grid-template-columns: repeat(12, 1fr); gap: var(--s3); }
+  .statement .label { grid-column: 1 / 4; }
+  .statement blockquote {
+    grid-column: 4 / 13; margin: 0;
+    font-size: clamp(1.75rem, 3.6vw, 3rem); line-height: 1.2; letter-spacing: -.01em;
+  }
+  .statement blockquote em { color: var(--accent); }
+  .statement .bio {
+    grid-column: 4 / 11; margin-top: var(--s5);
+    columns: 2; column-gap: var(--s5); color: var(--ink-soft);
+  }
+  .statement .bio p { margin: 0 0 var(--s2); }
+  @media (max-width: 900px) {
+    .statement { padding: var(--s10) 0; }
+    .statement .label, .statement blockquote, .statement .bio { grid-column: 1 / -1; }
+    .statement .bio { columns: 1; }
+  }
+
+  /* ---------- Section heads ---------- */
+  .section { padding: var(--s16) 0; }
+  .section-head {
+    display: flex; align-items: flex-end; justify-content: space-between; flex-wrap: wrap;
+    gap: var(--s3); margin-bottom: var(--s8);
+    border-bottom: 1px solid var(--ink); padding-bottom: var(--s3);
+  }
+  .section-head h2 {
+    margin: 0; font-weight: 400; font-size: clamp(2.5rem, 6vw, 5rem); line-height: 1; letter-spacing: -.02em;
+  }
+  .section-head h2 .num { font-family: var(--font-mono); font-size: 16px; letter-spacing: .1em; color: var(--accent); vertical-align: top; margin-right: var(--s2); }
+  @media (max-width: 900px) { .section { padding: var(--s10) 0; } }
+
+  /* ---------- Filters ---------- */
+  .filters { display: flex; flex-wrap: wrap; gap: var(--s1); }
+  .chip {
+    font-family: var(--font-mono); font-size: 14px; letter-spacing: .1em; text-transform: uppercase;
+    background: transparent; color: var(--ink); border: 1px solid var(--line);
+    min-height: 44px; padding: 0 var(--s3); cursor: pointer; border-radius: 999px;
+    transition: background .2s, color .2s, border-color .2s;
+  }
+  .chip:hover { border-color: var(--ink); }
+  .chip[aria-pressed="true"] { background: var(--ink); border-color: var(--ink); color: var(--surface); }
+  .chip .count { opacity: .6; margin-left: 6px; }
+
+  /* ---------- Gallery ---------- */
+  .gallery {
+    list-style: none; margin: 0; padding: 0;
+    display: grid; grid-template-columns: repeat(12, 1fr); column-gap: var(--s3); row-gap: var(--s10);
+  }
+  .gallery li { grid-column: span 6; }
+  .gallery li.wide   { grid-column: 1 / 8; }
+  .gallery li.narrow { grid-column: 9 / 13; margin-top: var(--s16); }
+  .gallery li.narrow-l { grid-column: 1 / 6; margin-top: var(--s16); }
+  .gallery li.wide-r   { grid-column: 7 / 13; }
+  .gallery li.mid    { grid-column: 4 / 10; }
+  .gallery li[hidden] { display: none; }
+  .shot {
+    display: block; width: 100%; padding: 0; border: 0; background: var(--secondary);
+    cursor: zoom-in; overflow: hidden; position: relative;
+  }
+  .shot img {
+    width: 100%; aspect-ratio: 2 / 3; object-fit: cover;
+    transition: transform 1.2s var(--ease), filter .6s var(--ease);
+  }
+  .shot:hover img { transform: scale(1.03); }
+  .shot .view {
+    position: absolute; right: var(--s2); bottom: var(--s2);
+    background: var(--surface); color: var(--ink);
+    font-family: var(--font-mono); font-size: 13px; letter-spacing: .12em; text-transform: uppercase;
+    padding: 6px 12px; opacity: 0; transform: translateY(6px);
+    transition: opacity .3s var(--ease), transform .3s var(--ease);
+  }
+  .shot:hover .view, .shot:focus-visible .view { opacity: 1; transform: none; }
+  .caption { display: grid; grid-template-columns: auto 1fr; gap: 4px var(--s2); margin-top: var(--s2); }
+  .caption .no { font-family: var(--font-mono); color: var(--accent); font-size: 14px; padding-top: 4px; }
+  .caption h3 { margin: 0; font-size: 24px; font-weight: 400; line-height: 1.3; }
+  .caption p { grid-column: 2; margin: 0; }
+  @media (max-width: 720px) {
+    .gallery { row-gap: var(--s6); }
+    .gallery li, .gallery li.wide, .gallery li.narrow, .gallery li.narrow-l, .gallery li.wide-r, .gallery li.mid { grid-column: 1 / -1; margin-top: 0; }
+  }
+  .empty { padding: var(--s8) 0; text-align: center; color: var(--muted); }
+
+  /* ---------- Profile (dark) ---------- */
+  .profile { background: var(--ink); color: var(--on-dark); }
+  .profile .label { color: var(--on-dark-muted); }
+  .profile .section-head { border-bottom-color: #3a3a3a; }
+  .profile .section-head h2 .num { color: #d9a3ab; }
+  .profile-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: var(--s3); align-items: start; }
+  .profile-photo { grid-column: 1 / 6; }
+  .profile-photo img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 20%; }
+  .profile-body { grid-column: 7 / 13; }
+  .measure { width: 100%; border-collapse: collapse; font-size: 20px; }
+  .measure caption { text-align: left; margin-bottom: var(--s2); }
+  .measure th, .measure td { text-align: left; padding: var(--s2) 0; border-bottom: 1px solid #2e2e2e; vertical-align: baseline; }
+  .measure th { font-family: var(--font-mono); font-weight: 400; font-size: 14px; letter-spacing: .14em; text-transform: uppercase; color: var(--on-dark-muted); width: 42%; }
+  .measure td small { font-family: var(--font-mono); color: var(--on-dark-muted); font-size: 14px; margin-left: var(--s1); }
+  .palette { margin-top: var(--s8); }
+  .palette h3 { font-weight: 400; font-size: 28px; margin: var(--s1) 0 var(--s1); }
+  .palette p { color: var(--on-dark-muted); margin: 0 0 var(--s3); max-width: 52ch; font-size: 16px; }
+  .swatches { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(6, 1fr); gap: var(--s1); }
+  .swatches li { font-family: var(--font-mono); font-size: 12px; letter-spacing: .06em; color: var(--on-dark-muted); }
+  .swatches span { display: block; aspect-ratio: 1; margin-bottom: 6px; border: 1px solid rgba(255,255,255,.12); }
+  @media (max-width: 900px) {
+    .profile-photo, .profile-body { grid-column: 1 / -1; }
+    .profile-photo img { aspect-ratio: 4 / 3; object-position: 50% 18%; }
+    .swatches { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  /* ---------- Expertise ---------- */
+  .expertise { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--line); }
+  .expertise li { padding: var(--s4) var(--s3) var(--s4) 0; border-right: 1px solid var(--line); }
+  .expertise li + li { padding-left: var(--s3); }
+  .expertise li:last-child { border-right: 0; }
+  .expertise h3 { font-weight: 400; font-size: 26px; margin: var(--s2) 0 var(--s1); line-height: 1.2; }
+  .expertise p { margin: 0; color: var(--muted); font-size: 16px; }
+  @media (max-width: 900px) {
+    .expertise { grid-template-columns: 1fr 1fr; }
+    .expertise li, .expertise li + li { padding: var(--s3) var(--s2); border-bottom: 1px solid var(--line); }
+    .expertise li:nth-child(2n) { border-right: 0; }
+  }
+  @media (max-width: 520px) {
+    .expertise { grid-template-columns: 1fr; }
+    .expertise li { border-right: 0; padding-left: 0 !important; }
+  }
+
+  /* ---------- Comp card ---------- */
+  .comp-section { background: var(--paper); }
+  .comp {
+    display: grid; grid-template-columns: 1fr 1fr; gap: var(--s4);
+  }
+  .card {
+    background: var(--surface); box-shadow: 0 1px 2px rgba(0,0,0,.06), 0 20px 50px -30px rgba(0,0,0,.25);
+    padding: var(--s3); display: flex; flex-direction: column; aspect-ratio: 5.5 / 8.5;
+  }
+  .card-front img { flex: 1; min-height: 0; width: 100%; object-fit: cover; object-position: 50% 25%; }
+  .card-name { display: flex; justify-content: space-between; align-items: baseline; gap: var(--s2); padding-top: var(--s2); }
+  .card-name strong { font-weight: 400; font-size: clamp(22px, 2.6vw, 34px); line-height: 1.05; }
+  .card-name strong em { color: var(--accent); }
+  .card-back .grid4 { flex: 1; min-height: 0; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: var(--s1); }
+  .card-back .grid4 img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 22%; }
+  .card-stats { display: grid; grid-template-columns: repeat(5, auto); justify-content: space-between; gap: var(--s1); padding-top: var(--s2); margin: 0; }
+  .card-stats dt { font-family: var(--font-mono); font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+  .card-stats dd { margin: 0; font-size: 16px; }
+  .comp-actions { display: flex; flex-wrap: wrap; gap: var(--s2); align-items: center; margin-top: var(--s5); }
+  @media (max-width: 760px) { .comp { grid-template-columns: 1fr; max-width: 440px; margin: 0 auto; } }
+
+  /* ---------- Buttons ---------- */
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: var(--s1);
+    min-height: 52px; padding: 0 var(--s4);
+    font-family: var(--font-mono); font-size: 14px; letter-spacing: .14em; text-transform: uppercase;
+    text-decoration: none; cursor: pointer;
+    background: var(--ink); color: var(--surface); border: 1px solid var(--ink);
+    transition: background .2s, color .2s, transform .2s;
+  }
+  .btn:hover { background: var(--accent); border-color: var(--accent); }
+  .btn:active { transform: translateY(1px); }
+  .btn.ghost { background: transparent; color: var(--ink); }
+  .btn.ghost:hover { background: var(--ink); color: var(--surface); border-color: var(--ink); }
+
+  /* ---------- Contact ---------- */
+  .contact { padding: var(--s16) 0 var(--s12); text-align: center; }
+  .contact h2 { font-weight: 400; margin: var(--s3) auto var(--s4); font-size: clamp(2.6rem, 7.5vw, 6.5rem); line-height: 1; letter-spacing: -.02em; max-width: 14ch; }
+  .contact h2 em { color: var(--accent); }
+  .contact p.lede { color: var(--muted); max-width: 46ch; margin: 0 auto var(--s6); }
+  .contact-links { display: flex; justify-content: center; flex-wrap: wrap; gap: var(--s2); }
+
+  /* ---------- Footer ---------- */
+  footer { border-top: 1px solid var(--line); padding: var(--s5) 0; font-size: 15px; color: var(--muted); }
+  footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--s3); }
+  footer ul { list-style: none; margin: var(--s1) 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 4px var(--s3); color: var(--ink-soft); }
+
+  /* ---------- Lightbox ---------- */
+  dialog.lightbox {
+    border: 0; padding: 0; margin: 0; max-width: none; max-height: none;
+    width: 100vw; height: 100vh; height: 100dvh;
+    background: rgba(12,12,12,.96); color: var(--on-dark);
+  }
+  dialog.lightbox::backdrop { background: rgba(0,0,0,.6); }
+  .lb-inner { height: 100%; display: grid; grid-template-rows: 1fr auto; padding: var(--s3); gap: var(--s2); }
+  .lb-stage { min-height: 0; display: flex; align-items: center; justify-content: center; }
+  .lb-stage img { max-height: 100%; max-width: 100%; width: auto; object-fit: contain; }
+  .lb-bar { display: flex; align-items: center; justify-content: space-between; gap: var(--s2); flex-wrap: wrap; }
+  .lb-bar .lb-cap { font-size: 18px; }
+  .lb-bar .lb-cap span { font-family: var(--font-mono); font-size: 14px; color: var(--on-dark-muted); margin-right: var(--s2); }
+  .lb-controls { display: flex; gap: var(--s1); }
+  .lb-btn {
+    min-width: 48px; min-height: 48px; padding: 0 var(--s2);
+    background: transparent; color: var(--on-dark); border: 1px solid #444; cursor: pointer;
+    font-family: var(--font-mono); font-size: 14px; letter-spacing: .1em; text-transform: uppercase;
+  }
+  .lb-btn:hover { background: var(--on-dark); color: var(--ink); }
+  .lightbox :focus-visible { outline-color: #e7b5bc; }
+
+  /* ---------- Reveal motion ---------- */
+  .js .reveal { opacity: 0; transform: translateY(24px); transition: opacity .9s var(--ease), transform .9s var(--ease); }
+  .js .reveal.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .js .reveal { opacity: 1; transform: none; transition: none; }
+    .shot img, .nav a::after { transition: none; }
+    .shot:hover img { transform: none; }
+  }
+
+  /* ---------- Print: comp card only ---------- */
+  @media print {
+    @page { size: A4 landscape; margin: 10mm; }
+    body { background: #fff; font-size: 12pt; }
+    body > *:not(main) { display: none !important; }
+    main > *:not(#compcard) { display: none !important; }
+    #compcard { padding: 0 !important; background: #fff !important; }
+    #compcard .section-head, #compcard .comp-actions { display: none !important; }
+    .comp { grid-template-columns: 1fr 1fr; gap: 10mm; max-width: none; }
+    .card { box-shadow: none; border: 1px solid #ccc; height: 185mm; aspect-ratio: auto; break-inside: avoid; }
+    .js .reveal { opacity: 1 !important; transform: none !important; }
+  }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header" id="top">
+  <div class="wrap">
+    <a class="monogram" href="#top" aria-label="Kaweesha Randahara, back to top">Kaweesha <em>&nbsp;R.</em></a>
+    <nav class="nav" aria-label="Primary">
+      <a href="#work">Work</a>
+      <a href="#profile">Profile</a>
+      <a href="#compcard">Comp card</a>
+      <a class="nav-cta" href="#contact">Book</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- HERO -->
+  <section class="hero" aria-labelledby="name">
+    <div class="wrap">
+      <div class="hero-text">
+        <p class="label kicker">Model · Portfolio 2026</p>
+        <h1 class="name" id="name">
+          <span class="initials">W.L</span>
+          <span class="first">Kaweesha</span>
+          <span class="last">Randahara</span>
+        </h1>
+        <p class="hero-intro">Bridal, fashion and editorial model, comfortable in heavy couture and in a plain studio gown.</p>
+        <dl class="vitals">
+          <div><dt class="label">Height</dt><dd>5′8″<small>173 cm</small></dd></div>
+          <div><dt class="label">Weight</dt><dd>52 kg<small>115 lb</small></dd></div>
+          <div><dt class="label">Age</dt><dd>22<small>years</small></dd></div>
+        </dl>
+      </div>
+      <figure class="hero-media reveal">
+        <img src="images/bridal-red.jpg" width="853" height="1280"
+             alt="Kaweesha seated on a wooden bench in a hand-embroidered crimson bridal lehenga with a sheer red dupatta, one hand resting on her head, eyes closed."
+             fetchpriority="high">
+        <figcaption class="label"><span>No. 01 — Crimson</span><span>Saranga Photography</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- STATEMENT -->
+  <section class="statement" aria-label="About">
+    <div class="wrap">
+      <p class="label reveal">About</p>
+      <blockquote class="reveal">
+        From <em>hand-embroidered lehengas</em> and the ivory Kandyan drape to a black evening gown under coloured studio light.
+      </blockquote>
+      <div class="bio reveal">
+        <p>Kaweesha Randahara is a 22-year-old model with a long 5′8″ frame and light skin with cool undertones. She works mainly in bridal and traditional wear, and in studio fashion portraiture.</p>
+        <p>She holds a pose without looking stiff and can carry heavy jewellery and layered textiles. She has worked with several photographers and is open to bridal campaigns, fashion editorials, commercial print and runway.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORK -->
+  <section class="section" id="work" aria-labelledby="work-title">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="work-title"><span class="num">01</span>Selected work</h2>
+        <div class="filters" role="group" aria-label="Filter photographs by category">
+          <button class="chip" type="button" data-filter="all" aria-pressed="true">All<span class="count">5</span></button>
+          <button class="chip" type="button" data-filter="bridal" aria-pressed="false">Bridal<span class="count">2</span></button>
+          <button class="chip" type="button" data-filter="traditional" aria-pressed="false">Traditional<span class="count">1</span></button>
+          <button class="chip" type="button" data-filter="studio" aria-pressed="false">Studio<span class="count">2</span></button>
+        </div>
+      </div>
+
+      <ul class="gallery" id="gallery" aria-live="polite">
+        <li data-cat="bridal" class="reveal">
+          <button class="shot" type="button" data-index="0" aria-label="Open photo: Crimson Lehenga">
+            <img loading="lazy" src="images/bridal-red.jpg" width="853" height="1280"
+                 alt="Seated pose in a crimson embroidered bridal lehenga with a sheer red dupatta, against shelves of glowing pottery.">
+            <span class="view" aria-hidden="true">View</span>
+          </button>
+          <div class="caption"><span class="no">01</span><h3>Crimson Lehenga</h3><p class="label">Bridal · Saranga Photography</p></div>
+        </li>
+        <li data-cat="traditional" class="reveal">
+          <button class="shot" type="button" data-index="1" aria-label="Open photo: Ivory Kandyan">
+            <img loading="lazy" src="images/kandyan-ivory.jpg" width="720" height="1080"
+                 alt="Over-the-shoulder look in an ivory and gold Kandyan bridal saree with a gold headpiece and flowers in her hair, beside a lake.">
+            <span class="view" aria-hidden="true">View</span>
+          </button>
+          <div class="caption"><span class="no">02</span><h3>Ivory Kandyan</h3><p class="label">Traditional · Nimsara Jananjaya Photography</p></div>
+        </li>
+        <li data-cat="bridal" class="reveal">
+          <button class="shot" type="button" data-index="2" aria-label="Open photo: Jewel Bouquet">
+            <img loading="lazy" src="images/bridal-bouquet.jpg" width="853" height="1280"
+                 alt="Close portrait in a plum embroidered bridal blouse with a multicoloured kundan necklace, jhumkas and maang tikka, holding a bouquet of red and violet flowers.">
+            <span class="view" aria-hidden="true">View</span>
+          </button>
+          <div class="caption"><span class="no">03</span><h3>Jewel Bouquet</h3><p class="label">Bridal · Saranga Photography</p></div>
+        </li>
+        <li data-cat="studio" class="reveal">
+          <button class="shot" type="button" data-index="3" aria-label="Open photo: Noir, Standing">
+            <img loading="lazy" src="images/studio-black-ladder.jpg" width="1365" height="2048"
+                 alt="Full-length studio pose in a black one-shoulder gown with a cut-out waist and thigh-high slit, leaning on a wooden ladder.">
+            <span class="view" aria-hidden="true">View</span>
+          </button>
+          <div class="caption"><span class="no">04</span><h3>Noir, Standing</h3><p class="label">Studio · Yazas Rangana Photography</p></div>
+        </li>
+        <li data-cat="studio" class="reveal">
+          <button class="shot" type="button" data-index="4" aria-label="Open photo: Noir, Rose">
+            <img loading="lazy" src="images/studio-black-rose.jpg" width="1365" height="2048"
+                 alt="Studio pose kneeling on a black plinth in a black one-shoulder gown, holding a single red rose to her chin.">
+            <span class="view" aria-hidden="true">View</span>
+          </button>
+          <div class="caption"><span class="no">05</span><h3>Noir, Rose</h3><p class="label">Studio · Yazas Rangana Photography</p></div>
+        </li>
+      </ul>
+      <p class="empty" id="empty" hidden>No photographs in this category yet.</p>
+    </div>
+  </section>
+
+  <!-- PROFILE -->
+  <section class="section profile" id="profile" aria-labelledby="profile-title">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="profile-title"><span class="num">02</span>Profile</h2>
+        <p class="label">Measurements &amp; colouring</p>
+      </div>
+      <div class="profile-grid">
+        <figure class="profile-photo reveal" style="margin:0">
+          <img loading="lazy" src="images/studio-black-rose.jpg" width="1365" height="2048"
+               alt="Kaweesha smiling, holding a red rose, in a black one-shoulder gown.">
+        </figure>
+        <div class="profile-body reveal">
+          <table class="measure">
+            <caption class="label">Stats</caption>
+            <tbody>
+              <tr><th scope="row">Full name</th><td>W.L Kaweesha Randahara</td></tr>
+              <tr><th scope="row">Height</th><td>5′8″<small>173 cm</small></td></tr>
+              <tr><th scope="row">Weight</th><td>52 kg<small>115 lb</small></td></tr>
+              <tr><th scope="row">Age</th><td>22</td></tr>
+              <tr><th scope="row">Skin colour</th><td>Light</td></tr>
+              <tr><th scope="row">Skin undertone</th><td>Cool</td></tr>
+            </tbody>
+          </table>
+
+          <div class="palette">
+            <p class="label">For stylists</p>
+            <h3>Colours that suit a cool undertone</h3>
+            <p>Jewel tones, true reds and silver or white-gold metals work well against light, cool-toned skin, as the wine and plum bridal looks show.</p>
+            <ul class="swatches">
+              <li><span style="background:#7a1e2c"></span>Wine</li>
+              <li><span style="background:#5b2a5e"></span>Plum</li>
+              <li><span style="background:#1f3f8a"></span>Sapphire</li>
+              <li><span style="background:#0f6b55"></span>Emerald</li>
+              <li><span style="background:#c8102e"></span>True red</li>
+              <li><span style="background:#c9ccd1"></span>Silver</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AVAILABLE FOR -->
+  <section class="section" aria-labelledby="for-title">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="for-title"><span class="num">03</span>Available for</h2>
+      </div>
+      <ul class="expertise">
+        <li class="reveal"><span class="label">i.</span><h3>Bridal &amp; traditional</h3><p>Lehenga, Kandyan and saree campaigns, plus jewellery and salon lookbooks.</p></li>
+        <li class="reveal"><span class="label">ii.</span><h3>Fashion editorial</h3><p>Concept shoots, magazine stories and designer collections.</p></li>
+        <li class="reveal"><span class="label">iii.</span><h3>Commercial &amp; print</h3><p>Beauty, cosmetics, brand campaigns and social content.</p></li>
+        <li class="reveal"><span class="label">iv.</span><h3>Runway &amp; events</h3><p>Fashion shows, bridal exhibitions and brand launches.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- COMP CARD -->
+  <section class="section comp-section" id="compcard" aria-labelledby="comp-title">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="comp-title"><span class="num">04</span>Comp card</h2>
+        <p class="label">Front &amp; back · printable</p>
+      </div>
+      <div class="comp">
+        <article class="card card-front reveal" aria-label="Comp card, front">
+          <img src="images/bridal-bouquet.jpg" width="853" height="1280"
+               alt="Headshot in plum bridal wear with a kundan necklace and a bouquet of flowers.">
+          <div class="card-name">
+            <strong>Kaweesha<br><em>Randahara</em></strong>
+            <span class="label">Model</span>
+          </div>
+        </article>
+        <article class="card card-back reveal" aria-label="Comp card, back">
+          <div class="grid4">
+            <img src="images/studio-black-ladder.jpg" alt="Full-length studio look in a black gown.">
+            <img src="images/kandyan-ivory.jpg" alt="Ivory Kandyan bridal look.">
+            <img src="images/bridal-red.jpg" alt="Crimson lehenga look.">
+            <img src="images/studio-black-rose.jpg" alt="Studio look with a red rose.">
+          </div>
+          <dl class="card-stats">
+            <div><dt>Height</dt><dd>5′8″ / 173</dd></div>
+            <div><dt>Weight</dt><dd>52 kg</dd></div>
+            <div><dt>Age</dt><dd>22</dd></div>
+            <div><dt>Skin</dt><dd>Light</dd></div>
+            <div><dt>Tone</dt><dd>Cool</dd></div>
+          </dl>
+        </article>
+      </div>
+      <div class="comp-actions">
+        <button class="btn" type="button" id="print-comp">Print / save comp card as PDF</button>
+        <span class="label">Prints both sides on one A4 landscape page</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact" aria-labelledby="contact-title">
+    <div class="wrap">
+      <p class="label">Bookings &amp; enquiries</p>
+      <h2 id="contact-title" class="reveal">Let’s create <em>something</em> beautiful.</h2>
+      <p class="lede">Send the shoot date, location and a short brief, and you’ll hear back within 24 hours.</p>
+      <div class="contact-links">
+        <!-- EDIT: replace with real contact details -->
+        <a class="btn" href="mailto:hello@example.com?subject=Booking%20enquiry%20%E2%80%94%20Kaweesha%20Randahara">Email to book</a>
+        <a class="btn ghost" href="https://wa.me/00000000000" rel="noopener">WhatsApp</a>
+        <a class="btn ghost" href="https://instagram.com/" rel="noopener">Instagram</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <div>© 2026 W.L Kaweesha Randahara. All rights reserved.</div>
+    </div>
+    <div>
+      <span class="label">Photography</span>
+      <ul>
+        <li>Saranga Photography</li>
+        <li>Nimsara Jananjaya Photography</li>
+        <li>Yazas Rangana Photography</li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<dialog class="lightbox" id="lightbox" aria-label="Photo viewer">
+  <div class="lb-inner">
+    <div class="lb-stage"><img id="lb-img" src="" alt=""></div>
+    <div class="lb-bar">
+      <p class="lb-cap" id="lb-cap" aria-live="polite"></p>
+      <div class="lb-controls">
+        <button class="lb-btn" type="button" id="lb-prev" aria-label="Previous photo">←</button>
+        <button class="lb-btn" type="button" id="lb-next" aria-label="Next photo">→</button>
+        <button class="lb-btn" type="button" id="lb-close">Close</button>
+      </div>
+    </div>
+  </div>
+</dialog>
+
+<script>
+(() => {
+  // Header border on scroll
+  const header = document.querySelector('.site-header');
+  const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 8);
+  onScroll(); window.addEventListener('scroll', onScroll, { passive: true });
+
+  // Reveal on scroll
+  const reveals = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+    reveals.forEach(el => io.observe(el));
+  } else {
+    reveals.forEach(el => el.classList.add('in'));
+  }
+
+  // Gallery layout + filtering
+  const items = [...document.querySelectorAll('#gallery li')];
+  const pattern = ['wide', 'narrow', 'narrow-l', 'wide-r', 'mid'];
+  const layout = () => {
+    const visible = items.filter(li => !li.hidden);
+    items.forEach(li => li.classList.remove(...pattern));
+    visible.forEach((li, i) => li.classList.add(pattern[i % pattern.length]));
+    document.getElementById('empty').hidden = visible.length > 0;
+  };
+  document.querySelectorAll('.chip').forEach(chip => {
+    chip.addEventListener('click', () => {
+      const f = chip.dataset.filter;
+      document.querySelectorAll('.chip').forEach(c => c.setAttribute('aria-pressed', String(c === chip)));
+      items.forEach(li => {
+        li.hidden = !(f === 'all' || li.dataset.cat === f);
+        if (!li.hidden) li.classList.add('in');
+      });
+      layout();
+    });
+  });
+  layout();
+
+  // Lightbox
+  const dlg = document.getElementById('lightbox');
+  const img = document.getElementById('lb-img');
+  const cap = document.getElementById('lb-cap');
+  let current = 0;
+  const visibleShots = () => items.filter(li => !li.hidden);
+  const show = (li) => {
+    const pic = li.querySelector('img');
+    img.src = pic.currentSrc || pic.src;
+    img.alt = pic.alt;
+    const no = li.querySelector('.no').textContent;
+    const title = li.querySelector('h3').textContent;
+    const meta = li.querySelector('.caption p').textContent;
+    cap.innerHTML = '';
+    const s = document.createElement('span'); s.textContent = 'No. ' + no;
+    cap.append(s, document.createTextNode(title + ' — ' + meta));
+  };
+  const step = (d) => {
+    const vis = visibleShots();
+    current = (current + d + vis.length) % vis.length;
+    show(vis[current]);
+  };
+  let opener = null;
+  document.querySelectorAll('.shot').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const li = btn.closest('li');
+      current = visibleShots().indexOf(li);
+      show(li);
+      opener = btn;
+      if (typeof dlg.showModal === 'function') dlg.showModal(); else dlg.setAttribute('open', '');
+      document.getElementById('lb-close').focus();
+    });
+  });
+  document.getElementById('lb-prev').addEventListener('click', () => step(-1));
+  document.getElementById('lb-next').addEventListener('click', () => step(1));
+  document.getElementById('lb-close').addEventListener('click', () => dlg.close());
+  dlg.addEventListener('close', () => { if (opener) opener.focus(); });
+  dlg.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft') { e.preventDefault(); step(-1); }
+    if (e.key === 'ArrowRight') { e.preventDefault(); step(1); }
+  });
+  dlg.addEventListener('click', (e) => { if (e.target.classList.contains('lb-stage')) dlg.close(); });
+
+  // Print comp card
+  document.getElementById('print-comp').addEventListener('click', () => window.print());
+})();
+</script>
+</body>
+</html>
