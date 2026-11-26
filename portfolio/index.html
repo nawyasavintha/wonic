@@ -305,11 +305,22 @@
   .card-name { display: flex; justify-content: space-between; align-items: baseline; gap: var(--s2); padding-top: var(--s2); }
   .card-name strong { font-weight: 400; font-size: clamp(22px, 2.6vw, 34px); line-height: 1.05; }
   .card-name strong em { color: var(--accent); }
-  .card-back .grid4 { flex: 1; min-height: 0; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: var(--s1); }
-  .card-back .grid4 img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 22%; }
-  .card-stats { display: grid; grid-template-columns: repeat(5, auto); justify-content: space-between; gap: var(--s1); padding-top: var(--s2); margin: 0; }
-  .card-stats dt { font-family: var(--font-mono); font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
-  .card-stats dd { margin: 0; font-size: 16px; }
+  .card-back .grid4 {
+    flex: 1 1 0; min-height: 0; overflow: hidden;
+    display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: repeat(2, minmax(0, 1fr));
+    gap: var(--s1);
+  }
+  .card-back .grid4 img { width: 100%; height: 100%; min-height: 0; object-fit: cover; object-position: 50% 22%; }
+  .card-stats {
+    flex: none; position: relative; z-index: 1; background: var(--surface);
+    display: grid; grid-template-columns: repeat(5, auto); justify-content: space-between; gap: var(--s1) var(--s2);
+    margin: var(--s2) 0 0; padding-top: var(--s2); border-top: 1px solid var(--ink);
+  }
+  .card-stats dt { font-family: var(--font-mono); font-size: 13px; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-soft); margin-bottom: 2px; }
+  .card-stats dd { margin: 0; font-size: 17px; line-height: 1.25; }
+  @media (max-width: 480px) {
+    .card-stats { grid-template-columns: repeat(3, auto); justify-content: start; gap: var(--s2) var(--s4); }
+  }
   .comp-actions { display: flex; flex-wrap: wrap; gap: var(--s2); align-items: center; margin-top: var(--s5); }
   @media (max-width: 760px) { .comp { grid-template-columns: 1fr; max-width: 440px; margin: 0 auto; } }
 
@@ -381,6 +392,8 @@
     #compcard .section-head, #compcard .comp-actions { display: none !important; }
     .comp { grid-template-columns: 1fr 1fr; gap: 10mm; max-width: none; }
     .card { box-shadow: none; border: 1px solid #ccc; height: 185mm; aspect-ratio: auto; break-inside: avoid; }
+    .card-stats dt { color: #333; font-size: 9pt; }
+    .card-stats dd { font-size: 12pt; }
     .js .reveal { opacity: 1 !important; transform: none !important; }
   }
 </style>
